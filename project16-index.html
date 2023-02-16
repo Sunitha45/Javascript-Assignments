@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 question</title>
+</head>
+<body>
+    <script>
+      
+      function getCurrentSeason() {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+
+  if (month > 3 && month < 6) {
+    return 'spring';
+  }
+
+  if (month > 6 && month < 9) {
+    return 'summer';
+  }
+
+  if (month > 9 && month < 12) {
+    return 'fall';
+  }
+
+  if (month >= 1 && month < 3) {
+    return 'winter';
+  }
+
+  const day = now.getDate();
+  if (month === 3) {
+    return day < 22 ? 'winter' : 'spring';
+  }
+
+  if (month === 6) {
+    return day < 22 ? 'spring' : 'summer';
+  }
+
+  if (month === 9) {
+    return day < 22 ? 'summer' : 'fall';
+  }
+
+  if (month === 12) {
+    return day < 22 ? 'fall' : 'winter';
+  }
+
+  console.error('Unable to calculate current season');
+}
+    </script>
+</body>
+</html>

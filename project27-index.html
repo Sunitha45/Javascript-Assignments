@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 question</title>
+</head>
+<body>
+    <script>
+    function prime(){
+        var number = 100;
+        var isPrime;
+        for(let i=2; i<=number; i++){
+            for(let j=2; j<i; j++){
+                if(i%j === 0){
+                isPrime = 0;
+                break;
+                }
+                  else{
+                  isPrime = 1;
+                  }
+            }
+            if(isPrime === 1){
+                console.log(i);
+            }
+        }    
+    }
+     prime();
+    </script>
+</body>
+</html>

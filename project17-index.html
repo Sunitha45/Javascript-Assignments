@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 question</title>
+</head>
+<body>
+    <h1>No. of days in a Month</h1>
+    <script>
+        function monthDays(n){
+            if(n==1 || n==3 || n==5 || n==7 || n==8 || n==10 || n==12){
+                return 31;
+            }
+            else if(n==4 || n==6 || n==9 || n==11){
+                return 30;
+            }
+            else if(n==2){
+                return 28;
+            }
+            else{
+                return "Error";
+            }
+        }
+        let n=4
+        answer = monthDays(n);
+        console.log(answer);
+    </script>
+</body>
+</html>
